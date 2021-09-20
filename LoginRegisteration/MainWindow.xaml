@@ -1,0 +1,21 @@
+﻿<Window x:Class="LoginRegisteration.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:LoginRegisteration"
+        xmlns:view ="clr-namespace:LoginRegisteration.View"
+        xmlns:viewModels="clr-namespace:LoginRegisteration.ViewModel" d:DataContext="{d:DesignInstance Type=viewModels:MainViewModel}"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="290" Width="474">
+    <!--<ContentControl Content="{Binding CurrentViewModel}">
+        <ContentControl.Resources>
+            <DataTemplate DataType="{x:Type viewModels:LoginViewModel}">
+                <view:LoginView/>
+            </DataTemplate>
+        </ContentControl.Resources>
+    </ContentControl>-->
+    <StackPanel>
+        <view:LoginView/>
+    </StackPanel>
+</Window>
