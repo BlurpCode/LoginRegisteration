@@ -26,9 +26,13 @@ namespace LoginRegisteration.Commands
 
         public void Execute(object parameter)
         {
-            if (parameter.ToString() == "SignUp")
+            if (parameter.ToString() == "Register")
             {
                 viewModel.currentViewModel = new RegistrationViewModel();
+            }
+            else if (parameter.ToString() == "Login")
+            {
+                viewModel.currentViewModel = new LoginViewModel();
             }
         }
     }
