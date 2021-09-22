@@ -5,9 +5,12 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:LoginRegisteration.View"
              mc:Ignorable="d"
+             xmlns:view ="clr-namespace:LoginRegisteration.View"
+             xmlns:viewModels="clr-namespace:LoginRegisteration.ViewModel" d:DataContext="{d:DesignInstance Type=viewModels:MainViewModel}"
              d:Background="White"
              d:DesignHeight="284" d:DesignWidth="474">
     <StackPanel>
+        
         <StackPanel.Resources>
             <Style x:Key="textboxStyle" TargetType="TextBox">
                 <Setter Property="Height" Value="25"/>
@@ -33,8 +36,8 @@
                 <ColumnDefinition/>
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
-            <Button Grid.Column="0" Style="{StaticResource buttonStyle}">Sign Up With Us</Button>
-            <Button Grid.Column="1" Style="{StaticResource buttonStyle}">Login</Button>
+            <Button Grid.Column="0" Style="{StaticResource buttonStyle}" Command="{Binding UpdateViewCommand}" CommandParameter="SignUp">Sign Up With Us</Button>
+            <Button Grid.Column="1" Style="{StaticResource buttonStyle}" Command="{Binding ValidateLoginDetails}" CommandParameter="Login">Login</Button>
         </Grid>
         <TextBlock Name="tbkErrorMessage" Visibility="Visible" Style="{StaticResource textblockStyle}" Text="User Does not Exist, Make an Account/Password is incorrect" Foreground="Red"/>
     </StackPanel>

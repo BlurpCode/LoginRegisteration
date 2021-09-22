@@ -9,7 +9,5 @@ namespace LoginRegisteration.ViewModel
 {
     class LoginViewModel : ViewModelBase
     {
-        public string WelcomeMessage = "Login";
-        public ICommand NavigateAccountCommand { get; }
     }
 }
