@@ -11,14 +11,13 @@ namespace LoginRegisteration.ViewModel
     //This view model will control the navigation between viewModels
     public class MainViewModel:ViewModelBase
     {
-        private ViewModelBase _currentViewModel = new LoginViewModel();
+        private ViewModelBase _currentViewModel;
         public ViewModelBase currentViewModel
         {
             get { return _currentViewModel; }
             set { 
                 _currentViewModel = value;
                 OnPropertyChanged(nameof(currentViewModel));
-                
             }
         }
 

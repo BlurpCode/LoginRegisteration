@@ -35,7 +35,7 @@
             <TextBlock Text="Confirm Password" Style="{StaticResource textblockStyle}"/>
             <TextBox Style="{StaticResource textboxStyle}"/>
             <Button Grid.Column="1" Style="{StaticResource buttonStyle}">Register</Button>
-            <TextBlock Name="tbkErrorMessage" Visibility="Visible" Style="{StaticResource textblockStyle}" Text="Passwords Do not Match/Required Field Not entered/Invalid Email" Foreground="Red"/>
+            <TextBlock Name="tbkErrorMessage" Visibility="Hidden" Style="{StaticResource textblockStyle}" Text="Passwords Do not Match/Required Field Not entered/Invalid Email" Foreground="Red"/>
         </StackPanel>
     </StackPanel>
 </UserControl>
