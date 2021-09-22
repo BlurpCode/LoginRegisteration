@@ -1,18 +1,31 @@
-﻿using System;
+﻿using LoginRegisteration.Commands;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Input;
 
 namespace LoginRegisteration.ViewModel
 {
-    class MainViewModel:ViewModelBase
+    //This view model will control the navigation between viewModels
+    public class MainViewModel:ViewModelBase
     {
-        public ViewModelBase CurrentViewModel = new ViewModelBase();
-
-        public MainViewModel()
+        private ViewModelBase _currentViewModel = new LoginViewModel();
+        public ViewModelBase currentViewModel
         {
-            CurrentViewModel = new LoginViewModel();
+            get { return _currentViewModel; }
+            set { 
+                _currentViewModel = value;
+                OnPropertyChanged(nameof(currentViewModel));
+                
+            }
+        }
+
+        public ICommand UpdateViewCommand { get; set; }
+
+        public MainViewModel() {
+            UpdateViewCommand = new UpdateViewCommand(this);
         }
     }
 }

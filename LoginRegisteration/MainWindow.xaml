@@ -5,17 +5,10 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:LoginRegisteration"
         xmlns:view ="clr-namespace:LoginRegisteration.View"
-        xmlns:viewModels="clr-namespace:LoginRegisteration.ViewModel" d:DataContext="{d:DesignInstance Type=viewModels:MainViewModel}"
+        xmlns:viewModels="clr-namespace:LoginRegisteration.ViewModel"
         mc:Ignorable="d"
-        Title="MainWindow" Height="290" Width="474">
-    <!--<ContentControl Content="{Binding CurrentViewModel}">
-        <ContentControl.Resources>
-            <DataTemplate DataType="{x:Type viewModels:LoginViewModel}">
-                <view:LoginView/>
-            </DataTemplate>
-        </ContentControl.Resources>
-    </ContentControl>-->
+        Title="" Height="442" Width="598">
     <StackPanel>
-        <view:LoginView/>
+        <ContentControl Content="{Binding currentViewModel}"/>
     </StackPanel>
 </Window>

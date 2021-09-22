@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace LoginRegisteration.ViewModel
 {
-    class RegistrationViewModel
+    class RegistrationViewModel: ViewModelBase
     {
     }
 }
